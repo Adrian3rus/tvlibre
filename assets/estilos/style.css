@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+    text-align: center;
+}
+
+#channelList {
+    margin-bottom: 20px;
+}
+
+#channels {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.channel-item {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.channel-item:hover {
+    background-color: #ccc;
+}
+
+.channel-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+video {
+    width: 100%;
+    max-width: 640px;
+    height: auto;
+    margin: 0 auto;
+}
