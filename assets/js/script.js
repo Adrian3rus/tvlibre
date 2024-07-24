@@ -29,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
             if (line.startsWith('#EXTINF:')) {
                 const info = line.split(',');
                 channel.name = info[1].trim();
+                const logoMatch = line.match(/tvg-logo="([^"]+)"/);
+                if (logoMatch) {
+                    channel.logo = logoMatch[1];
+                } else {
+                    channel.logo = 'https://via.placeholder.com/150';
+                }
             } else if (line.startsWith('http')) {
                 channel.url = line.trim();
                 channels.push(channel);
@@ -44,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const div = document.createElement('div');
             div.className = 'channel-item';
             div.innerHTML = `
-                <img src="https://via.placeholder.com/150" alt="${channel.name}">
+                <img src="${channel.logo}" alt="${channel.name}">
                 <p>${channel.name}</p>
             `;
             div.addEventListener('click', () => {
@@ -55,10 +61,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function openPlayer(url) {
-        window.location.href = `player.html?url=${encodeURIComponent(url)}`;
+        window.location.href = `../assets/sitio/player.html?url=${encodeURIComponent(url)}`;
     }
 
-    loadM3U('https://iptv-org.github.io/iptv/languages/spa.m3u').then(channels => {
+    loadM3U('../assets/listas/AR.m3u').then(channels => {
         displayChannels(channels);
     });
 });
