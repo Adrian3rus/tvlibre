@@ -2,17 +2,17 @@
 #EXTINF:-1 tvg-id="3" tvg-name="TN Todo Noticias" tvg-logo="https://camo.githubusercontent.com/8a39be4cebcc156702e2e12b87ff25a04b21a7fdbac668afbcb917b7bc059807/68747470733a2f2f75706c6f61642e77696b696d656469612e6f72672f77696b6970656469612f636f6d6d6f6e732f7468756d622f342f34662f544e5f746f646f5f6e6f7469636961735f6c6f676f2e7376672f32303070782d544e5f746f646f5f6e6f7469636961735f6c6f676f2e7376672e706e67", TN todo Noticias
 https://live-01-01-tn.vodgc.net/TN24/index.m3u8?PlaylistM3UCL
 
-#EXTINF:-1 tvg-id="1081" tvg-name="AnimeStation" tvg-logo="https://cdn.m3u.cl/logo/1081_AnimeStation.png", AnimeStation ✪ | AR
+#EXTINF:-1 tvg-id="1081" tvg-name="AnimeStation" tvg-logo="https://cdn.m3u.cl/logo/1081_AnimeStation.png", AnimeStation
 https://ssh101-fl.bozztv.com/ssh101/livestreamingtv/playlist.m3u8?PlaylistM3UCL
 
-#EXTINF:-1 tvg-id="1019" tvg-name="Latino Kids TV" tvg-logo="https://cdn.m3u.cl/logo/1019_Latino_Kids_TV.png", Latino Kids TV ✪ | UY
+#EXTINF:-1 tvg-id="1019" tvg-name="Latino Kids TV" tvg-logo="https://cdn.m3u.cl/logo/1019_Latino_Kids_TV.png", Latino Kids TV
 https://cloud5.streaminglivehd.com:3555/hybrid/play.m3u8?PlaylistM3UCL
 
-#EXTINF:-1 tvg-id="1019" tvg-name="Latino Kids TV" tvg-logo="https://camo.githubusercontent.com/db15dac93f98a1def7aac8358a0329e2c62d22dfb329ecf467724ca117180a20/68747470733a2f2f692e696d6775722e636f6d2f5a4b37415146672e706e67", Canal 13
+#EXTINF:-1 tvg-id="109" tvg-name="Canal 13" tvg-logo="https://camo.githubusercontent.com/db15dac93f98a1def7aac8358a0329e2c62d22dfb329ecf467724ca117180a20/68747470733a2f2f692e696d6775722e636f6d2f5a4b37415146672e706e67", Canal 13
 https://live-01-02-eltrece.vodgc.net/eltrecetv/index.m3u8
 
 
-#EXTINF:-1 tvg-id="1019" tvg-name="Latino Kids TV" tvg-logo="https://camo.githubusercontent.com/b6c07ac5772cba8937b261a3f5840858db91e73877db59f06e9a3e9b1e5269a4/68747470733a2f2f692e696d6775722e636f6d2f45746356536d342e706e67", Canal 9
+#EXTINF:-1 tvg-id="19" tvg-name="Canal 9" tvg-logo="https://camo.githubusercontent.com/b6c07ac5772cba8937b261a3f5840858db91e73877db59f06e9a3e9b1e5269a4/68747470733a2f2f692e696d6775722e636f6d2f45746356536d342e706e67", Canal 9
 https://octubre-live.cdn.vustreams.com/live/channel09/live.isml/live.m3u8
 
 
