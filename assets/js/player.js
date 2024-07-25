@@ -1,16 +1,15 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const player = videojs('videoPlayer');
-
     const urlParams = new URLSearchParams(window.location.search);
-    const channelUrl = urlParams.get('url');
+    const videoUrl = urlParams.get('url');
 
-    if (channelUrl) {
+    if (videoUrl) {
+        const player = videojs('videoPlayer');
         player.src({
-            src: channelUrl,
+            src: videoUrl,
             type: 'application/x-mpegURL'
         });
         player.play();
     } else {
-        alert('No se proporcionó ninguna URL de canal.');
+        console.error('No se proporcionó una URL de video.');
     }
 });
