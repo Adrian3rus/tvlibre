@@ -5,9 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
         type: 'application/x-mpegURL'
     });
     player.play();
-});
 
-document.addEventListener('DOMContentLoaded', function() {
     const channelList = document.getElementById('channels');
 
     async function loadM3U(url) {
@@ -17,6 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return parseM3U(data);
         } catch (error) {
             console.error('Error al cargar la lista M3U:', error);
+            return [];
         }
     }
 
@@ -30,11 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const info = line.split(',');
                 channel.name = info[1].trim();
                 const logoMatch = line.match(/tvg-logo="([^"]+)"/);
-                if (logoMatch) {
-                    channel.logo = logoMatch[1];
-                } else {
-                    channel.logo = 'https://via.placeholder.com/150';
-                }
+                channel.logo = logoMatch ? logoMatch[1] : 'https://via.placeholder.com/150';
             } else if (line.startsWith('http')) {
                 channel.url = line.trim();
                 channels.push(channel);
@@ -64,43 +59,39 @@ document.addEventListener('DOMContentLoaded', function() {
         window.location.href = `../assets/sitio/player.html?url=${encodeURIComponent(url)}`;
     }
 
-    loadM3U('../assets/listas/AR.m3u').then(channels => {
-        displayChannels(channels);
+    loadM3U('../assets/listas/AR.m3u').then(displayChannels);
+
+    document.querySelectorAll('.grid-item').forEach(item => {
+        item.addEventListener('click', function() {
+            const videoUrl = this.getAttribute('data-video-url');
+            document.getElementById('videoFrame').src = videoUrl;
+            document.getElementById('videoModal').style.display = 'flex';
+        });
     });
-});
 
-
-
-document.querySelectorAll('.grid-item').forEach(item => {
-    item.addEventListener('click', function() {
-        const videoUrl = this.getAttribute('data-video-url');
-        document.getElementById('videoFrame').src = videoUrl;
-        document.getElementById('videoModal').style.display = 'flex';
-    });
-});
-
-document.getElementById('closeModal').addEventListener('click', function() {
-    document.getElementById('videoModal').style.display = 'none';
-    document.getElementById('videoFrame').src = '';
-});
-
-document.getElementById('fullscreenModal').addEventListener('click', function() {
-    const modalContent = document.querySelector('.modal-content');
-    if (modalContent.requestFullscreen) {
-        modalContent.requestFullscreen();
-    } else if (modalContent.mozRequestFullScreen) { // Firefox
-        modalContent.mozRequestFullScreen();
-    } else if (modalContent.webkitRequestFullscreen) { // Chrome, Safari and Opera
-        modalContent.webkitRequestFullscreen();
-    } else if (modalContent.msRequestFullscreen) { // IE/Edge
-        modalContent.msRequestFullscreen();
-    }
-});
-
-window.addEventListener('click', function(event) {
-    const modal = document.getElementById('videoModal');
-    if (event.target === modal) {
-        modal.style.display = 'none';
+    document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('videoModal').style.display = 'none';
         document.getElementById('videoFrame').src = '';
-    }
+    });
+
+    document.getElementById('fullscreenModal').addEventListener('click', function() {
+        const modalContent = document.querySelector('.modal-content');
+        if (modalContent.requestFullscreen) {
+            modalContent.requestFullscreen();
+        } else if (modalContent.mozRequestFullScreen) { // Firefox
+            modalContent.mozRequestFullScreen();
+        } else if (modalContent.webkitRequestFullscreen) { // Chrome, Safari and Opera
+            modalContent.webkitRequestFullscreen();
+        } else if (modalContent.msRequestFullscreen) { // IE/Edge
+            modalContent.msRequestFullscreen();
+        }
+    });
+
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('videoModal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.getElementById('videoFrame').src = '';
+        }
+    });
 });
