@@ -25,30 +25,40 @@
             <div id="channels" class="grid"></div>
         </div>
         
-        <h1>Películas</h1>
-    <div class="grid-container">
-        <div class="grid-item" data-video-url="https://drive.google.com/file/d/1YEC_ypQiKbGiwdI-INQJzoXku5YXmOXY/preview">
-            <img src="../assets/img/robocop.jpg" alt="Robocop">
-        </div>
-        <!-- Repite los grid-item según sea necesario -->
-        <div class="grid-item" data-video-url="https://drive.google.com/file/d/1_1E8LVvGztgvZryn6aSq4cVI8SpA-OjE/preview">
-            <img src="../assets/img/matrix.jpg" alt="Matrix">
-        </div>
-        <!-- Agrega más grid-items según sea necesario -->
-        <div class="grid-item" data-video-url="https://drive.google.com/file/d/1d-mmXiwKKYh9J2xIn7KeHrQKraPHD3KL/preview">
-            <img src="../assets/img/mortalkombat.jpg" alt="Mortal Kombat">
         
-    </div>
 
-    <div class="modal" id="videoModal">
-        <div class="modal-content">
-            <span class="close" id="closeModal">&times;</span>
-            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay"></iframe>
-        </div>
-    </div>
+        <h1>Películas</h1>
+            <div class="grid-container">
+            <div class="grid-item" data-video-url="https://drive.google.com/file/d/1YEC_ypQiKbGiwdI-INQJzoXku5YXmOXY/preview">
+            <img src="../assets/img/robocop.jpg" alt="Robocop">
+            </div>
+            <!-- Repite los grid-item según sea necesario -->
+            <div class="grid-item" data-video-url="https://drive.google.com/file/d/1_1E8LVvGztgvZryn6aSq4cVI8SpA-OjE/preview">
+                <img src="../assets/img/matrix.jpg" alt="Matrix">
+            </div>
+            <!-- Agrega más grid-items según sea necesario -->
+            <div class="grid-item" data-video-url="https://drive.google.com/file/d/1d-mmXiwKKYh9J2xIn7KeHrQKraPHD3KL/preview">
+                <img src="../assets/img/mortalkombat.jpg" alt="Mortal Kombat">
+            </div>
+            </div>
 
-
+            <div class="modal" id="videoModal">
+                <div class="modal-content">
+                    <span class="close" id="closeModal">&times;</span>
+                    <iframe id="videoFrame" src="" frameborder="0" allow="autoplay"></iframe>
+                </div>
+            </div>
+            
+            <div>
+                <div class="pluto-tv-container">
+                    <iframe src="https://pluto.tv/live-tv/channel-name" allowfullscreen></iframe>
+                </div>
+            </div>
+    
     </main>
+
+    
+
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/videojs-contrib-hls@5.15.0/dist/videojs-contrib-hls.min.js"></script>
     <script src="./assets/js/script.js"></script>
