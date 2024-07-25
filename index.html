@@ -25,6 +25,25 @@
             <div id="channels" class="grid"></div>
         </div>
         
+        <h1>Cuadrícula de Películas</h1>
+    <div class="grid-container">
+        <div class="grid-item" data-video-url="https://drive.google.com/file/d/1YEC_ypQiKbGiwdI-INQJzoXku5YXmOXY/preview">
+            <img src="../assets/img/robocop.jpg" alt="Robocop">
+        </div>
+        <!-- Repite los grid-item según sea necesario -->
+        <div class="grid-item" data-video-url="#">
+            <img src="ruta_a_la_imagen_de_la_pelicula_2.jpg" alt="Película 2">
+        </div>
+        <!-- Agrega más grid-items según sea necesario -->
+    </div>
+
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <iframe id="videoFrame" src="" frameborder="0" allow="autoplay"></iframe>
+        </div>
+    </div>
+
 
     </main>
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
