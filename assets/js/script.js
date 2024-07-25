@@ -84,6 +84,19 @@ document.getElementById('closeModal').addEventListener('click', function() {
     document.getElementById('videoFrame').src = '';
 });
 
+document.getElementById('fullscreenModal').addEventListener('click', function() {
+    const modalContent = document.querySelector('.modal-content');
+    if (modalContent.requestFullscreen) {
+        modalContent.requestFullscreen();
+    } else if (modalContent.mozRequestFullScreen) { // Firefox
+        modalContent.mozRequestFullScreen();
+    } else if (modalContent.webkitRequestFullscreen) { // Chrome, Safari and Opera
+        modalContent.webkitRequestFullscreen();
+    } else if (modalContent.msRequestFullscreen) { // IE/Edge
+        modalContent.msRequestFullscreen();
+    }
+});
+
 window.addEventListener('click', function(event) {
     const modal = document.getElementById('videoModal');
     if (event.target === modal) {
