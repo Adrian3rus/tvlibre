@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #333;
+    /* background-color: #333; */
     color: #fff;
     text-align: center;
     padding: 1em 0;
@@ -33,14 +33,15 @@ main {
 }
 
 .channel-item {
-    background-color: #ddd;
+    /* background-color: #ddd; */
     padding: 10px;
     text-align: center;
     cursor: pointer;
 }
 
 .channel-item:hover {
-    background-color: #ccc;
+    background-color: #494343;
+    border-radius: 20px;
 }
 
 .channel-item img {
@@ -48,6 +49,7 @@ main {
     height: auto;
     display: block;
     margin: 0 auto 10px;
+    filter: drop-shadow(2px 2px 20px);
 }
 
 .video-container {
