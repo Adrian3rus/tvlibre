@@ -46,7 +46,22 @@
                 </div>
             </div>
         </section>
+
+        <section id="channelList2">
+            <h2>Canales Extras</h2>
+            <div id="channels2" class="grid2"></div>
+        </section>
         
+        <!-- Modal for channels from the second list -->
+
+<div class="modal" id="channelModal">
+    <div class="modal-content">
+        <span class="close" id="closeChannelModal">&times;</span>
+        <video id="channelVideoPlayer" class="video-js vjs-default-skin" controls preload="auto" width="640" height="264"></video>
+    </div>
+</div>
+
+
         <section>
             <h2>Pluto TV</h2>
             <div class="pluto-tv-container">
@@ -54,6 +69,14 @@
             </div>
         </section>
     </main>
+
+    <h1>Buscar Series en AnimeFLV</h1>
+    <form id="searchForm">
+        <input type="text" id="searchQuery" placeholder="Escribe el nombre de la serie" required>
+        <button type="submit">Buscar</button>
+    </form>
+    <div id="results"></div>
+    
     <footer>
         <div>
             <p>Gracias por utilizar Gratis TV Pagina sin fines de lucro</p>
